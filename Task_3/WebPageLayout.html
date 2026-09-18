@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohini's Little Space</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* BASIC STYLING */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fffaf5;
+            color: #292b40;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* SIDEBAR LAYOUT */
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 230px;
+            background-color: #292b40;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .sidebar h2 {
+            color: #ffd6a5;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .sidebar p {
+            color: #d5d5e2;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+        }
+
+        .sidebar a:hover {
+            background-color: #4b4d68;
+        }
+
+        .main {
+            flex: 1;
+            padding: 35px;
+        }
+
+        .main h1 {
+            margin-top: 0;
+            font-size: 36px;
+        }
+
+        .intro {
+            color: #68697b;
+            margin-bottom: 35px;
+        }
+
+        /* PRODUCT SECTION */
+
+        .product-section {
+            text-align: center;
+        }
+
+        .product-section > h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .section-text {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* PRODUCT CARD */
+
+        .product-card {
+            background-color: white;
+            width: 320px;
+            max-width: 100%;
+
+            /* CSS BOX MODEL */
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid #f1c9a5;
+            border-radius: 14px;
+
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(41, 43, 64, 0.06);
+        }
+
+        .product-image {
+            background-color: #fff0dc;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .product-card h2 {
+            margin-bottom: 8px;
+            font-size: 23px;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 15px 0;
+            padding: 12px 0;
+            border-top: 1px solid #eee4dc;
+            border-bottom: 1px solid #eee4dc;
+        }
+
+        .product-details span {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .price {
+            color: #d47745;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            background-color: #292b40;
+            color: white;
+            border: none;
+            padding: 11px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+        }
+
+        .buy-btn:hover {
+            background-color: #d47745;
+        }
+
+        /* BLOG SECTION */
+
+        .blog-section {
+            margin-top: 50px;
+        }
+
+        .blog-section > h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .blog-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .blog-card {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #eadfd5;
+            border-radius: 12px;
+        }
+
+        .blog-card h3 {
+            font-size: 21px;
+        }
+
+        .blog-card p {
+            color: #68697b;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .tag {
+            color: #d47745;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 60px;
+            padding: 25px 0;
+            border-top: 1px solid #eadfd5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        footer strong {
+            color: #292b40;
+        }
+
+        /* MOBILE RESPONSIVE DESIGN */
+
+        @media (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .main {
+                padding: 25px 20px;
+            }
+
+            .main h1 {
+                font-size: 30px;
+            }
+
+            .product-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .blog-container {
+                flex-direction: column;
+            }
+
+            .blog-card {
+                width: 100%;
+            }
+
+            footer {
+                text-align: center;
+                justify-content: center;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h2>little space ✦</h2>
+
+            <p>A tiny corner of the internet.</p>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#product">Product</a>
+                <a href="#blog">Blog</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main">
+
+            <h1>Welcome to my space</h1>
+
+            <p class="intro">
+                A simple responsive webpage made with HTML and CSS.
+            </p>
+
+
+            <!-- PRODUCT SECTION -->
+
+            <section id="product" class="product-section">
+
+                <h2>Featured Product</h2>
+
+                <p class="section-text">
+                    Something simple for your everyday ideas.
+                </p>
+
+                <div class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=600&q=80"
+                            alt="Aesthetic notebook">
+
+                    </div>
+
+                    <h2>Dreamy Notebook</h2>
+
+                    <p>
+                        A pretty notebook for ideas, dreams,
+                        and all the little things.
+                    </p>
+
+                    <div class="product-details">
+
+                        <span>Hardcover</span>
+                        <span>120 Pages</span>
+                        <span>A5 Size</span>
+
+                    </div>
+
+                    <p class="price">₹299</p>
+
+                    <button class="buy-btn">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- BLOG SECTION -->
+
+            <section id="blog" class="blog-section">
+
+                <h2>From the Blog</h2>
+
+                <p class="section-text">
+                    A few things I am learning along the way.
+                </p>
+
+                <div class="blog-container">
+
+                    <article class="blog-card">
+
+                        <span class="tag">01 · LEARN</span>
+
+                        <h3>Learning HTML</h3>
+
+                        <p>
+                            HTML helps us create the structure
+                            of a webpage using simple tags.
+                        </p>
+
+                    </article>
+
+
+                    <article class="blog-card">
+
+                        <span class="tag">02 · DESIGN</span>
+
+                        <h3>CSS Magic</h3>
+
+                        <p>
+                            CSS makes websites beautiful
+                            using colors, spacing, and layouts.
+                        </p>
+
+                    </article>
+
+
+                    <article class="blog-card">
+
+                        <span class="tag">03 · GROW</span>
+
+                        <h3>Keep Building</h3>
+
+                        <p>
+                            Every small project is a step
+                            towards becoming a better developer.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer>
+
+                <p>
+                    © 2026 <strong>Mohini's Little Space</strong>
+                </p>
+
+                <p>
+                    Made with HTML & CSS 
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
