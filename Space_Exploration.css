@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #080b24;
+    color: white;
+}
+
+
+/* ---------- Navbar ---------- */
+
+.space-nav {
+    background-color: #11183d;
+    padding: 12px 0;
+}
+
+.space-nav .navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.space-nav .nav-link {
+    color: #dbe4ff;
+    margin-left: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.space-nav .nav-link:hover {
+    color: #64dfff;
+}
+
+.space-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #64dfff;
+    left: 50%;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.space-nav .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero {
+    background-color: #0b1230;
+    padding: 90px 0;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero h1 span {
+    color: #64dfff;
+}
+
+.hero p {
+    color: #b9c4e5;
+    font-size: 18px;
+}
+
+.subtitle {
+    color: #64dfff !important;
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+
+/* ---------- Planet ---------- */
+
+.planet {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #1d2b64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+
+    animation: floatPlanet 3s ease-in-out infinite;
+}
+
+@keyframes floatPlanet {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Explore Button ---------- */
+
+.explore-btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #64dfff;
+    color: #07102f;
+    transform: translateY(-3px);
+}
+
+
+/* ---------- About ---------- */
+
+.about {
+    background-color: #080b24;
+}
+
+.about h2,
+.missions h2,
+.contact h2 {
+    color: white;
+}
+
+.about > .container > p {
+    color: #aeb9d5;
+}
+
+.info-box {
+    padding: 25px;
+    background-color: #11183d;
+    border: 1px solid #293566;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px #02051a;
+    border-color: #64dfff;
+}
+
+.info-box h4 {
+    margin-top: 10px;
+    color: #64dfff;
+}
+
+.info-box p {
+    color: #aeb9d5;
+}
+
+
+/* ---------- Missions ---------- */
+
+.missions {
+    background-color: #0b1230;
+}
+
+.mission-card {
+    padding: 25px;
+    background-color: #11183d;
+    border: 1px solid #293566;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px #02051a;
+    border-color: #64dfff;
+}
+
+.mission-card h3 {
+    color: #64dfff;
+}
+
+.mission-card p {
+    color: #aeb9d5;
+}
+
+.mission-card .btn {
+    background-color: #2563eb;
+    color: white;
+    padding: 7px 18px;
+}
+
+.mission-card .btn:hover {
+    background-color: #64dfff;
+    color: #07102f;
+}
+
+
+/* ---------- Contact ---------- */
+
+.contact {
+    background-color: #080b24;
+}
+
+.contact p {
+    color: #aeb9d5;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #64dfff;
+    color: #07102f;
+    transform: translateY(-3px);
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer {
+    background-color: #050719;
+    color: #aeb9d5;
+}
+
+
+/* ---------- Mobile Navbar ---------- */
+
+@media (max-width: 991px) {
+
+    .space-nav .navbar-toggler {
+        border: 1px solid #64dfff;
+    }
+
+    .space-nav .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+
+    .space-nav .navbar-collapse {
+        background-color: #11183d;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .space-nav .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    .space-nav .nav-link::after {
+        display: none;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .planet {
+        width: 170px;
+        height: 170px;
+        font-size: 75px;
+        margin-top: 40px;
+    }
+}
